@@ -1,0 +1,41 @@
+
+.profile-page {
+    width: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 8%;
+    border-radius: 15px;
+}
+
+#profile-title {
+    width: 80%;
+    text-align: right;
+    color: #B0B0B0;
+    border-bottom: #B0B0B0 solid 2px;
+}
+#profile-title span {
+    color: #B46FCC;
+}
+#translations-list {
+    display: inline-block;
+    margin: 4% auto 8% auto;
+    font-size: 1.6rem;
+    font-style: italic;
+    font-weight: bold;
+    color: #3d3d3d;
+}
+#translations-list li {
+    margin-bottom: 3%;
+}
+#translations-list li::marker {
+    color: #B46FCC;
+    font-size: 1.75rem;
+    content: "->    "
+}
+#first-list-item::marker {
+    content: "Latest ⭐  " !important;
+}
+.profile-page .lt-delete-button {
+    margin: auto;
+}

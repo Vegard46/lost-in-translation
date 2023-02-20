@@ -45,3 +45,21 @@
 .lt-image-row img {
     width: 85px;
 }
+
+.lt-delete-button button {
+    font-size: 2rem;
+    width: 175px;
+    height: 60px;
+    border-radius: 15px;
+    outline: none;
+    border: none;
+    color: #8a8a8a;
+    background-color: #cccbcb;
+    transition: .15s ease-in-out;
+}
+.lt-delete-button button:hover {
+    transform: scale(1.1);
+    background-color: #B46FCC;
+    color: white;
+    cursor: pointer;
+}

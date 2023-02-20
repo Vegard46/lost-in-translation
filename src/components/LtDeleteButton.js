@@ -1,9 +1,12 @@
 import './lt-widgets.css';
 
-function LtDeleteButton() {
+function LtDeleteButton(props) {
   return (
     <div className="lt-delete-button">
-      LtDeleteButton
+      <button>
+        {props.text + "  "}
+        <i class="fa fa-trash" aria-hidden="true"></i>
+      </button>
     </div>
   );
 }
