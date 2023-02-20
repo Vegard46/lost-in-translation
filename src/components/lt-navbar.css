@@ -1,3 +1,51 @@
 .lt-navbar {
     grid-row: 1 !important;
 }
+
+#nav {
+    display: flex;
+    justify-content: space-between;
+    height: 15vh;
+}
+
+.lt-navbar-button button {
+    width: 75px;
+    height: 55px;
+    font-size: 2rem;
+    display: flex;
+    outline: none;
+    border: none;
+    transition: .15s ease-in-out;
+    padding-bottom: 10%;
+}
+.lt-navbar-button button:hover {
+    height: 70px !important;
+    border-radius: 0 0 15px 15px !important;
+    cursor: pointer;
+    background-color: white;
+    color: #B46FCC;
+}
+.lt-navbar-button i {
+    margin: auto;
+}
+.lt-navbar-button .regular {
+    background-color: #B46FCC;
+    color: white;
+}
+.lt-navbar-button .cancel {
+    background-color: #908F8F;
+    color: #CAC6C6;
+}
+.lt-navbar-button .left {
+    border-radius: 0 0 0 15px;
+}
+.lt-navbar-button .right {
+    border-radius: 0 0 15px 0;
+}
+.lt-navbar-button .single {
+    border-radius: 0 0 15px 15px;
+}
+
+#menu-buttons {
+    display: flex;
+}

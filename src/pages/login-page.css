@@ -9,6 +9,9 @@
 .submit-container .lt-submit-widget {
     margin: auto;
 }
+.login-page .lt-submit-widget {
+    width: 80%;
+}
 
 
 .image-container {

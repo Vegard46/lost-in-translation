@@ -8,7 +8,7 @@ function LoginPage() {
         <img src={require('./logotrans.png')} alt='lost_in_translation'/>
       </div>
       <div className='submit-container'>
-        <LtSubmitWidget/>
+        <LtSubmitWidget text='What is your name?'/>
       </div>
     </div>
   );

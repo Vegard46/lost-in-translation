@@ -2,7 +2,7 @@
 
 .lt-submit-widget {
     display: flex;
-    width: 80%;
+    width: 100%;
 }
 #submit-input {
     width: 85%;
@@ -32,4 +32,16 @@
     cursor: pointer;
     background-color: white;
     color: #B46FCC;
+}
+
+
+.lt-image-row {
+    background-color: white;
+    border-radius: 15px;
+    display: inline-block;
+    padding: 1% 3% 1% 3%;
+    height: 95px;
+}
+.lt-image-row img {
+    width: 85px;
 }

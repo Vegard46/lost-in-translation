@@ -1,9 +1,9 @@
 import './lt-widgets.css';
 
-function LtSubmitWidget() {
+function LtSubmitWidget(props) {
   return (
     <div className="lt-submit-widget">
-      <input id='submit-input' placeholder='What is your name?'></input>
+      <input id='submit-input' placeholder={props.text}></input>
       <button id='submit-button' type='submit'>
         <i class="fa fa-chevron-right" aria-hidden="true"></i>
       </button>

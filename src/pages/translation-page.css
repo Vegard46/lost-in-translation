@@ -1,0 +1,29 @@
+
+.translation-page {
+    margin-bottom: 10%;
+}
+
+.translation-page .lt-submit-widget input {
+    border-radius: 15px 0 0 0 !important;
+}
+.translation-page .lt-submit-widget button {
+    border-radius: 0 15px 0 0  !important;
+}
+
+.translation-container {
+    min-height: 35vh;
+    background-color: #CECDCD;
+    border-radius: 0 0 15px 15px;
+    padding: 5%;
+}
+
+.image-add {
+    font-size: 2rem;
+    color: #9665A8;
+    margin: auto 5% auto 5%;
+}
+
+.row-container {
+    display: flex;
+    margin-bottom: 5%;
+}
