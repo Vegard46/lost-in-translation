@@ -1,0 +1,35 @@
+
+
+.lt-submit-widget {
+    display: flex;
+    width: 80%;
+}
+#submit-input {
+    width: 85%;
+    height: 70px;
+    border-radius: 15px 0 0 15px;
+    font-size: 1.6rem;
+    padding-left: 4%;
+    outline: none;
+    border: none;
+}
+#submit-input::placeholder {
+    opacity: .75;
+}
+
+
+#submit-button {
+    width: 15%;
+    border-radius: 0 15px 15px 0;
+    border: none;
+    outline: none;
+    background-color: #B46FCC;
+    color: white;
+    transition: .15s ease-in-out;
+    font-size: 3rem;
+}
+#submit-button:hover {
+    cursor: pointer;
+    background-color: white;
+    color: #B46FCC;
+}
