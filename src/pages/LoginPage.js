@@ -6,10 +6,8 @@ function LoginPage() {
 
   const [name, setName] = useState("");
 
-  //const apiUrl = "https://wandering-life-jacket-goat.cyclic.app";
-  //const apiKey = "WflwYc2ZmjPslA1PGTBgxmrg4l2jTBJn4zru2roEbL4bEL6ooIm9lCwsGAjvT5r6";
-  const apiUrl = "http://localhost:8080";
-  const apiKey = "abc";
+  const apiUrl = "noroff-api-production-156b.up.railway.app";
+  const apiKey = "1XMN2BaYYgxgu1sRhzWU0DydzNroZmnXNbzGNifZjiCINlNYHTKCNXSMrzhIDHTj";
 
   const login = () => {
 
