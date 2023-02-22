@@ -5,7 +5,7 @@ import './translation-page.css';
 
 function TranslationPage() {
 
-  const imageRow1 = [hands_images.hand1, hands_images.hand2, hands_images.hand1, hands_images.hand4]
+  const imageRow1 = [hands_images.hand1, hands_images.hand2, hands_images.hand1, hands_images.hand4, hands_images.hand1, hands_images.hand2, hands_images.hand1, hands_images.hand4]
   const imageRow2 = [hands_images.hand1, hands_images.hand2]
   const imageRow3 = [hands_images.hand3, hands_images.hand2, hands_images.hand3]
 
