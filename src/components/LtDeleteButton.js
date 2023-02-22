@@ -5,7 +5,7 @@ function LtDeleteButton(props) {
     <div className="lt-delete-button">
       <button>
         {props.text + "  "}
-        <i class="fa fa-trash" aria-hidden="true"></i>
+        <i className="fa fa-trash" aria-hidden="true"></i>
       </button>
     </div>
   );

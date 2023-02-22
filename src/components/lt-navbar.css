@@ -8,7 +8,23 @@
     height: 15vh;
 }
 
-.lt-navbar-button button {
+.nav-link:link {
+    text-decoration: none;
+}
+
+.nav-link:visited {
+    text-decoration: none;
+}
+
+.nav-link:hover {
+    text-decoration: none;
+}
+
+.nav-link:active {
+    text-decoration: none;
+}
+
+.lt-navbar-button .nav-link {
     width: 75px;
     height: 55px;
     font-size: 2rem;
@@ -18,13 +34,19 @@
     transition: .15s ease-in-out;
     padding-bottom: 10%;
 }
-.lt-navbar-button button:hover {
-    height: 70px !important;
-    border-radius: 0 0 15px 15px !important;
+.lt-navbar-button .nav-link:hover {
     cursor: pointer;
     background-color: white;
     color: #B46FCC;
 }
+.lt-navbar-button .active {
+    height: 70px !important;
+    border-radius: 0 0 15px 15px !important;
+    cursor: pointer;
+    background-color: white !important;
+    color: #B46FCC !important;
+}
+
 .lt-navbar-button i {
     margin: auto;
 }
