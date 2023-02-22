@@ -2,31 +2,46 @@ import LtSubmitWidget from '../components/LtSubmitWidget';
 import LtImageRow from '../components/LtImageRow';
 import hands_images from '../hands_images';
 import './translation-page.css';
+import { useContext, useState } from 'react';
+import { TranslationContext } from '../context/TranslationProvider';
 
 function TranslationPage() {
 
-  const imageRow1 = [hands_images.a, hands_images.b, hands_images.c, hands_images.d, hands_images.e, hands_images.f, hands_images.g, hands_images.h]
-  const imageRow2 = [hands_images.i, hands_images.j]
-  const imageRow3 = [hands_images.k, hands_images.l, hands_images.m]
+  const [translation, setTranslation] = useContext(TranslationContext);
+  const [images, setImages] = useState([]);
 
-  const rows = [imageRow1, imageRow2, imageRow3]
+
+  const fetchImages = () => {
+    let words = translation.toLowerCase().trim().split(" ");
+    let wordsImages = [];
+    words.map(word => {
+      word = word.split("");
+      let wordImages = [];
+      word.map(letter => {
+        return wordImages.push(hands_images[letter]);
+      })
+      return wordsImages.push(wordImages);
+    })
+    setImages(wordsImages);
+  }
+
 
   return (
-    <div className="translation-page">
-      <LtSubmitWidget text='Translate a phrase...'/>
-      <div className='translation-container'>
-          {rows.map((e, index) => {
-            return index < rows.length-1 
-            ? <div className='row-container'>
-                <LtImageRow images={e}/>
-                <i class="fa fa-plus image-add" aria-hidden="true"/>
-              </div> 
-            : <div className='row-container'>
-                <LtImageRow images={e}/>
-              </div>
-          })}
+      <div className="translation-page">
+        <LtSubmitWidget text='Translate a phrase...' onClick={fetchImages} onChange={setTranslation} value={translation}/>
+        <div className='translation-container'>
+            {images.map((e, index) => {
+              return index < images.length-1 
+              ? <div className='row-container'>
+                  <LtImageRow images={e}/>
+                  <i class="fa fa-plus image-add" aria-hidden="true"/>
+                </div> 
+              : <div className='row-container'>
+                  <LtImageRow images={e}/>
+                </div>
+            })}
+        </div>
       </div>
-    </div>
   );
 }
 

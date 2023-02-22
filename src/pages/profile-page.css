@@ -34,7 +34,7 @@
     content: "->    "
 }
 #first-list-item::marker {
-    content: "Latest ⭐  " !important;
+    content: "⭐  " !important;
 }
 .profile-page .lt-delete-button {
     margin: auto;

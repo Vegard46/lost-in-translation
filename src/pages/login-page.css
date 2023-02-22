@@ -1,5 +1,22 @@
 
 
+@media screen and (min-width: 801px) {
+    .login-page .lt-submit-widget {
+        width: 80%;
+    }
+    .image-container img {
+        width: 450px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .login-page .lt-submit-widget {
+        width: 100%;
+    }
+    .image-container img {
+        width: 300px;
+    }
+}
 
 
 
@@ -8,9 +25,6 @@
 }
 .submit-container .lt-submit-widget {
     margin: auto;
-}
-.login-page .lt-submit-widget {
-    width: 80%;
 }
 
 

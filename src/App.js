@@ -5,21 +5,24 @@ import LoginPage from './pages/LoginPage';
 import LtNavBar from './components/LtNavBar';
 import TranslationPage from './pages/TranslationPage';
 import ProfilePage from './pages/ProfilePage';
+import TranslationProvidor from './context/TranslationProvider';
 
 function App() {
   return (
     <div className="app">
       <div className='app-centered-container'>
         <BrowserRouter>
-          <Routes>
-            <Route path='/'>
-              <Route index element={<LoginPage/>}/>
-              <Route path='nav'  element={<LtNavBar/>}>
-                <Route path='translate' element={<TranslationPage/>}/>
-                <Route path='profile' element={<ProfilePage/>}/>
+          <TranslationProvidor>
+            <Routes>
+              <Route path='/'>
+                <Route index element={<LoginPage/>}/>
+                <Route path='nav'  element={<LtNavBar/>}>
+                  <Route path='translate' element={<TranslationPage/>}/>
+                  <Route path='profile' element={<ProfilePage/>}/>
+                </Route>
               </Route>
-            </Route>
-          </Routes>
+            </Routes>
+          </TranslationProvidor>
         </BrowserRouter>
       </div>
     </div>
