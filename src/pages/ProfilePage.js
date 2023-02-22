@@ -1,26 +1,33 @@
 import './profile-page.css';
 import LtDeleteButton from '../components/LtDeleteButton';
+import { useEffect, useState } from 'react';
 
 function ProfilePage() {
 
-  const listItems = [
-    "Hello World",
-    "Example translation",
-    "How are you doing",
-    "1 large coffee, please",
-    "Where is that?",
-    "Grandmother",
-    "Telephone number",
-    "I don't understand",
-    "Map",
-    "Public transport"
-  ]
+  const [translations, setTranslations] = useState([]);
+
+  const apiUrl = "https://wandering-life-jacket-goat.cyclic.app";
+
+  useEffect(() => {
+    fetchTranslations();
+  }, []);
+
+  function fetchTranslations(){
+    fetch(apiUrl + "/translations")
+      .then(response => response.json())
+      .then(result => {
+        let transl = result[0].translations;
+        transl.length = transl.length > 10 ? 10 : transl.length;
+        setTranslations(transl)
+      })
+      .catch(error => console.error(error));
+  }
 
   return (
     <div className="profile-page">
       <h1 id='profile-title'>Recent <span>Translations</span> for Thomas</h1>
       <ul id='translations-list'>
-        {listItems.map((e, index) => {
+        {translations.map((e, index) => {
           return index !== 0 
             ? <li key={index} style={{opacity: (100-index*6)/100}}>{e}</li>
             : <li id='first-list-item' key={index} style={{opacity: (100-index*6)/100}}>{e}</li>

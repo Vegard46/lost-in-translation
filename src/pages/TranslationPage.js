@@ -10,6 +10,7 @@ function TranslationPage() {
   const [translation, setTranslation] = useContext(TranslationContext);
   const [images, setImages] = useState([]);
 
+  const apiUrl = "https://wandering-life-jacket-goat.cyclic.app";
 
   const fetchImages = () => {
     let words = translation.toLowerCase().trim().split(" ");
