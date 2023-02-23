@@ -38,7 +38,7 @@ function LoginPage() {
             return response.json()
           })
           .then(newUser => {
-            // newUser is the new user with an id
+            console.log(newUser);
           })
           .catch(error => {
           })
