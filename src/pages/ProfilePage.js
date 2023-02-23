@@ -43,7 +43,7 @@ function ProfilePage() {
       fetch(apiUrl + '/translations/' + user[0].id, {
         method: 'PATCH',
         headers: {
-          'x-api-key': process.env.API_KEY,
+          'x-api-key': process.env.REACT_APP_API_KEY,
           'Content-Type': 'application/json'
         },
         body: JSON.stringify({

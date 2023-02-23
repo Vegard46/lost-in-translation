@@ -31,7 +31,7 @@ function LoginPage() {
           fetch(apiUrl + "/translations", {
             method: 'POST',
             headers: {
-              'x-api-Key': process.env.API_KEY,
+              'x-api-Key': process.env.REACT_APP_API_KEY,
               'Content-Type': 'application/json'
             },
             body: JSON.stringify({ 
