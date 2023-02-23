@@ -30,7 +30,8 @@ function TranslationPage() {
       transl.push(translation)
 
       console.log(process.env);
-      console.log(process.env.API_KEY)
+      console.log(process.env.API_KEY);
+      console.log(process.env.TEST_VARIABLE);
 
       fetch(apiUrl + '/translations/' + user[0].id, {
         method: 'PATCH',
