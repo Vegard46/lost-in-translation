@@ -6,7 +6,7 @@ function LoginPage() {
 
   const [name, setName] = useState("");
 
-  const apiUrl = "noroff-api-production-156b.up.railway.app";
+  const apiUrl = "https://noroff-api-production-156b.up.railway.app";
   const apiKey = "1XMN2BaYYgxgu1sRhzWU0DydzNroZmnXNbzGNifZjiCINlNYHTKCNXSMrzhIDHTj";
 
   const login = () => {
@@ -23,7 +23,7 @@ function LoginPage() {
           fetch(apiUrl + "/translations", {
             method: 'POST',
             headers: {
-              'X-API-Key': apiKey,
+              'x-api-Key': apiKey,
               'Content-Type': 'application/json'
             },
             body: JSON.stringify({ 
@@ -32,6 +32,7 @@ function LoginPage() {
             })
           })
           .then(response => {
+            console.log(response)
             if (!response.ok) {
               throw new Error('Could not create new user')
             }

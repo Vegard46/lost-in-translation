@@ -6,7 +6,7 @@ function ProfilePage() {
 
   const [translations, setTranslations] = useState([]);
 
-  const apiUrl = "noroff-api-production-156b.up.railway.app";
+  const apiUrl = "https://noroff-api-production-156b.up.railway.app";
 
   useEffect(() => {
     fetchTranslations();
