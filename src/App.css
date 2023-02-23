@@ -8,6 +8,16 @@ body {
     min-height: 100vh;
 }
 
+.shadow {
+    box-shadow:
+  0 2.8px 2.2px rgba(0, 0, 0, 0.014),
+  0 6.7px 5.3px rgba(0, 0, 0, 0.028),
+  0 12.5px 10px rgba(0, 0, 0, 0.03),
+  0 22.3px 17.9px rgba(0, 0, 0, 0.052),
+  0 41.8px 33.4px rgba(0, 0, 0, 0.066),
+  0 40px 40px rgba(0, 0, 0, 0.055)
+}
+
 .app {
     display: grid;
 }
@@ -24,6 +34,9 @@ body {
 @media screen and (max-width: 1500px) {
     .app {
         grid-template-columns: 25% 50% 25%;
+    }
+    html {
+        font-size: 14px;
     }
 }
 

@@ -1,11 +1,19 @@
 
-
-@media screen and (min-width: 801px) {
+@media screen and (min-width: 1501px) {
     .login-page .lt-submit-widget {
         width: 80%;
     }
     .image-container img {
         width: 450px;
+    }
+}
+
+@media screen and (max-width: 1500px) {
+    .login-page .lt-submit-widget {
+        width: 80%;
+    }
+    .image-container img {
+        width: 400px;
     }
 }
 

@@ -1,6 +1,7 @@
 
 .translation-page {
     margin-bottom: 10%;
+    border-radius: 0 0 15px 15px;
 }
 
 .translation-page .lt-submit-widget input {

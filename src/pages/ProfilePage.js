@@ -9,7 +9,7 @@ function ProfilePage() {
   const navigate = useNavigate();
 
   const apiUrl = "https://noroff-api-production-156b.up.railway.app";
-  const apiKey = "1XMN2BaYYgxgu1sRhzWU0DydzNroZmnXNbzGNifZjiCINlNYHTKCNXSMrzhIDHTj";
+  //const apiKey = "1XMN2BaYYgxgu1sRhzWU0DydzNroZmnXNbzGNifZjiCINlNYHTKCNXSMrzhIDHTj";
 
   useEffect(() => {
     fetchTranslations();
@@ -43,7 +43,7 @@ function ProfilePage() {
       fetch(apiUrl + '/translations/' + user[0].id, {
         method: 'PATCH',
         headers: {
-          'x-api-key': apiKey,
+          'x-api-key': process.env.API_KEY,
           'Content-Type': 'application/json'
         },
         body: JSON.stringify({

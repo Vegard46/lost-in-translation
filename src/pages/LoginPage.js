@@ -9,7 +9,7 @@ function LoginPage() {
   const navigate = useNavigate();
 
   const apiUrl = "https://noroff-api-production-156b.up.railway.app";
-  const apiKey = "1XMN2BaYYgxgu1sRhzWU0DydzNroZmnXNbzGNifZjiCINlNYHTKCNXSMrzhIDHTj";
+  //const apiKey = "1XMN2BaYYgxgu1sRhzWU0DydzNroZmnXNbzGNifZjiCINlNYHTKCNXSMrzhIDHTj";
 
   useEffect(() => {
     if(localStorage.getItem("user")){navigate('nav/translate')}
@@ -31,7 +31,7 @@ function LoginPage() {
           fetch(apiUrl + "/translations", {
             method: 'POST',
             headers: {
-              'x-api-Key': apiKey,
+              'x-api-Key': process.env.API_KEY,
               'Content-Type': 'application/json'
             },
             body: JSON.stringify({ 
@@ -63,7 +63,7 @@ function LoginPage() {
         <img src={require('./logotrans.png')} alt='lost_in_translation'/>
       </div>
       <div className='submit-container'>
-        <LtSubmitWidget text='What is your name?' onClick={login} onChange={setName} value={name}/>
+        <LtSubmitWidget class='shadow' text='What is your name?' onClick={login} onChange={setName} value={name}/>
       </div>
     </div>
   );
