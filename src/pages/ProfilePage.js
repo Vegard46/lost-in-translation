@@ -1,16 +1,22 @@
 import './profile-page.css';
 import LtDeleteButton from '../components/LtDeleteButton';
 import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function ProfilePage() {
 
   const [translations, setTranslations] = useState([]);
+  const navigate = useNavigate();
 
   const apiUrl = "https://noroff-api-production-156b.up.railway.app";
 
   useEffect(() => {
     fetchTranslations();
   }, []);
+
+  useEffect(() => {
+    if(!localStorage.getItem("user")){navigate('/')}
+  })
 
   function fetchTranslations(){
     fetch(apiUrl + "/translations")

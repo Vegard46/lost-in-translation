@@ -1,13 +1,19 @@
 import './login-page.css';
 import LtSubmitWidget from '../components/LtSubmitWidget';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import  { useNavigate } from 'react-router-dom'
 
 function LoginPage() {
 
   const [name, setName] = useState("");
+  const navigate = useNavigate();
 
   const apiUrl = "https://noroff-api-production-156b.up.railway.app";
   const apiKey = "1XMN2BaYYgxgu1sRhzWU0DydzNroZmnXNbzGNifZjiCINlNYHTKCNXSMrzhIDHTj";
+
+  useEffect(() => {
+    if(localStorage.getItem("user")){navigate('nav/translate')}
+  });
 
   const login = () => {
 
@@ -19,6 +25,8 @@ function LoginPage() {
       .then(result => {
         if(result[0] !== undefined){
           console.log("Logged in!");
+          localStorage.setItem("user", name);
+          navigate('nav/translate');
         } else {
           fetch(apiUrl + "/translations", {
             method: 'POST',
@@ -40,6 +48,7 @@ function LoginPage() {
           })
           .then(newUser => {
             console.log(newUser);
+            localStorage.setItem("user", name);
           })
           .catch(error => {
           })

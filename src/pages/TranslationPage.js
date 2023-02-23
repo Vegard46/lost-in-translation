@@ -2,15 +2,21 @@ import LtSubmitWidget from '../components/LtSubmitWidget';
 import LtImageRow from '../components/LtImageRow';
 import hands_images from '../hands_images';
 import './translation-page.css';
-import { useContext, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { TranslationContext } from '../context/TranslationProvider';
+import { useNavigate } from 'react-router-dom';
 
 function TranslationPage() {
 
   const [translation, setTranslation] = useContext(TranslationContext);
   const [images, setImages] = useState([]);
+  const navigate = useNavigate();
 
   const apiUrl = "https://wandering-life-jacket-goat.cyclic.app";
+
+  useEffect(() => {
+    if(!localStorage.getItem("user")){navigate('/')}
+  })
 
   const fetchImages = () => {
     let words = translation.toLowerCase().trim().split(" ");
