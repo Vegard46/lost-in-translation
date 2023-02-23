@@ -29,6 +29,8 @@ function TranslationPage() {
       let transl = user[0].translations;
       transl.push(translation)
 
+      console.log(process.env.API_KEY);
+
       fetch(apiUrl + '/translations/' + user[0].id, {
         method: 'PATCH',
         headers: {
