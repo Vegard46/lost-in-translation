@@ -17,7 +17,6 @@ function ProfilePage() {
 
   // The public API URL for the JSON server hosted on Railway
   const apiUrl = "https://noroff-api-production-156b.up.railway.app";
-  const apiKey = "1XMN2BaYYgxgu1sRhzWU0DydzNroZmnXNbzGNifZjiCINlNYHTKCNXSMrzhIDHTj";
 
   // Effect that initiates fetching of translation history for the given user
   // the empty [] dependency ensures this only happens on initial component mount
@@ -94,7 +93,7 @@ function ProfilePage() {
       fetch(apiUrl + '/translations/' + user[0].id, {
         method: 'PATCH',
         headers: {
-          'x-api-key': apiKey, //process.env.REACT_APP_API_KEY,
+          'x-api-key': process.env.REACT_APP_API_KEY, //API_KEY received from Vercel deployment
           'Content-Type': 'application/json'
         },
         body: JSON.stringify({

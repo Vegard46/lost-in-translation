@@ -15,7 +15,6 @@ function LoginPage() {
 
   // Public API URL for the JSON server being hosted on Railway
   const apiUrl = "https://noroff-api-production-156b.up.railway.app";
-  const apiKey = "1XMN2BaYYgxgu1sRhzWU0DydzNroZmnXNbzGNifZjiCINlNYHTKCNXSMrzhIDHTj";
 
   // Effect called on every update that will redirect to the Login page
   // if no active login session is found. Since there is no real login session
@@ -53,7 +52,7 @@ function LoginPage() {
           fetch(apiUrl + "/translations", {
             method: 'POST',
             headers: {
-              'x-api-Key': apiKey,//process.env.REACT_APP_API_KEY,
+              'x-api-Key': process.env.REACT_APP_API_KEY, //API_KEY received from Vercel deployment
               'Content-Type': 'application/json'
             },
             body: JSON.stringify({ 

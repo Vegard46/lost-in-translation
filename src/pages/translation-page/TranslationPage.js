@@ -29,7 +29,6 @@ function TranslationPage() {
 
   // The public APU URL of the Json server hosted on Railway
   const apiUrl = "https://noroff-api-production-156b.up.railway.app";
-  const apiKey = "1XMN2BaYYgxgu1sRhzWU0DydzNroZmnXNbzGNifZjiCINlNYHTKCNXSMrzhIDHTj";
 
   // Effect called on every update that will redirect to the Login page
   // if no active login session is found. Since there is no real login session
@@ -82,7 +81,7 @@ function TranslationPage() {
       fetch(apiUrl + '/translations/' + user[0].id, {
         method: 'PATCH',
         headers: {
-          'x-api-key': apiKey, //process.env.REACT_APP_API_KEY,
+          'x-api-key': process.env.REACT_APP_API_KEY, //API_KEY received from Vercel deployment
           'Content-Type': 'application/json'
         },
         body: JSON.stringify({
