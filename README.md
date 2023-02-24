@@ -1,70 +1,54 @@
-# Getting Started with Create React App
+# Noroff: Front End Assignment 2 - React Sign language Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Purpose
+The purpose of the assignment was to utilize the React framework to build an application that can translate basic english(latin) sentences to sign language by supplying the user with images showing sign-language gestures corresponding to the letters of the phrase. The project also aimed to familiarize the developer with deployment of both a static React application and a JSON server to hosting services like Vercel and Railway.
 
-## Available Scripts
+## Technologies
+- Language
+  - JavaScript(JSX), HTML and CSS
+- Framework
+  - React (Router, DOM, ContextAPI)
+  - Create-React-App for development and building
+- Server
+  - Simple JSON server with single db.json file
+- Deployment & Hosting
+  - Server
+    - Railway
+  - React application
+    - Vercel
+- Extra
+  - React Alerts and Confirm Alerts
+  - Fontawesome Icons by Twitter
+- Created with
+  - VSCode (Development environment)
+  - Figma (Design)
+  
+## Structure
+- public
+  - Contains index.html file which acts as the root markup entry point for React
+- src
+  - components
+    JavaScript and CSS for reusable components
+  - individual_signs
+    All individual PNG's of the sign language images
+  - context
+    Context providers for the React state
+  - pages
+    JavaScript and CSS for individual pages of the application
 
-In the project directory, you can run:
+- wireframes-figma.pdf
+  - Wireframes of the application created using figma
+- component-tree-figma.pdf
+  - Component tree model showing the general structure and relationships of the components used in the application, created using figma
+  
+## Run
+Clone this repository and run the following commands in the root directory:
+```
+npm install --legacy-peer-deps
+npm start
+```
 
-### `npm start`
+The reason for the "--legacy-peer-deps" is because the react-alert dependancy utilized in the project is not supported for React version of @17 or higher
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Creator 
+Vegard46 (Vegard Andersson)
