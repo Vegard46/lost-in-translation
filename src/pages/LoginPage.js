@@ -2,14 +2,16 @@ import './login-page.css';
 import LtSubmitWidget from '../components/LtSubmitWidget';
 import { useEffect, useState } from 'react';
 import  { useNavigate } from 'react-router-dom'
+import { useAlert } from 'react-alert';
 
 function LoginPage() {
 
   const [name, setName] = useState("");
   const navigate = useNavigate();
+  const alert = useAlert();
 
   const apiUrl = "https://noroff-api-production-156b.up.railway.app";
-  //const apiKey = "1XMN2BaYYgxgu1sRhzWU0DydzNroZmnXNbzGNifZjiCINlNYHTKCNXSMrzhIDHTj";
+  const apiKey = "1XMN2BaYYgxgu1sRhzWU0DydzNroZmnXNbzGNifZjiCINlNYHTKCNXSMrzhIDHTj";
 
   useEffect(() => {
     if(localStorage.getItem("user")){navigate('nav/translate')}
@@ -17,8 +19,8 @@ function LoginPage() {
 
   const login = () => {
 
-    if(name === ""){console.log("bad name!"); return;}
-    if(name.length > 15){console.log("bad name!"); return;}
+    if(name === ""){alert.error('Name cannot be empty'); return;}
+    if(name.length > 15){alert.error('Must be 15 characters or less'); return;}
 
     fetch(apiUrl + "/translations?username=" + name)
       .then(response => response.json())
@@ -27,11 +29,12 @@ function LoginPage() {
           console.log("Logged in!");
           localStorage.setItem("user", name);
           navigate('nav/translate');
+          alert.success('Logged in');
         } else {
           fetch(apiUrl + "/translations", {
             method: 'POST',
             headers: {
-              'x-api-Key': process.env.REACT_APP_API_KEY,
+              'x-api-Key': apiKey,//process.env.REACT_APP_API_KEY,
               'Content-Type': 'application/json'
             },
             body: JSON.stringify({ 
@@ -49,6 +52,8 @@ function LoginPage() {
           .then(newUser => {
             console.log(newUser);
             localStorage.setItem("user", name);
+            navigate('nav/translate');
+            alert.success('User registered');
           })
           .catch(error => {
           })
