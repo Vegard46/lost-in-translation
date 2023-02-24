@@ -26,7 +26,6 @@ function LoginPage() {
       .then(response => response.json())
       .then(result => {
         if(result[0] !== undefined){
-          console.log("Logged in!");
           localStorage.setItem("user", name);
           navigate('nav/translate');
           alert.success('Logged in');
@@ -43,17 +42,15 @@ function LoginPage() {
             })
           })
           .then(response => {
-            console.log(response)
             if (!response.ok) {
               throw new Error('Could not create new user')
             }
             return response.json()
           })
           .then(newUser => {
-            console.log(newUser);
             localStorage.setItem("user", name);
             navigate('nav/translate');
-            alert.success('User registered');
+            alert.success('User registered with name: ' + newUser.username);
           })
           .catch(error => {
           })

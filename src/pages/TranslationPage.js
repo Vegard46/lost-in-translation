@@ -54,7 +54,7 @@ function TranslationPage() {
         })
       })
       .then(response => response.json())
-      .then(result => console.log(result))
+      .then()
       .catch(error => console.error(error));
     })
   }
