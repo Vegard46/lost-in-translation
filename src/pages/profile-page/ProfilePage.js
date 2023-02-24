@@ -1,5 +1,5 @@
 import './profile-page.css';
-import LtDeleteButton from '../components/LtDeleteButton';
+import LtDeleteButton from '../../components/LtDeleteButton';
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAlert } from 'react-alert';

@@ -1,9 +1,9 @@
-import LtSubmitWidget from '../components/LtSubmitWidget';
-import LtImageRow from '../components/LtImageRow';
-import hands_images from '../hands_images';
+import LtSubmitWidget from '../../components/LtSubmitWidget';
+import LtImageRow from '../../components/LtImageRow';
+import hands_images from '../../hands_images';
 import './translation-page.css';
 import { useContext, useEffect, useState } from 'react';
-import { TranslationContext } from '../context/TranslationProvider';
+import { TranslationContext } from '../../context/TranslationProvider';
 import { useNavigate } from 'react-router-dom';
 import { useAlert } from 'react-alert';
 

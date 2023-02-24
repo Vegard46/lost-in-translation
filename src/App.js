@@ -1,10 +1,10 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
-import LoginPage from './pages/LoginPage';
+import LoginPage from './pages/login-page/LoginPage';
 import LtNavBar from './components/LtNavBar';
-import TranslationPage from './pages/TranslationPage';
-import ProfilePage from './pages/ProfilePage';
+import TranslationPage from './pages/translation-page/TranslationPage';
+import ProfilePage from './pages/profile-page/ProfilePage';
 import TranslationProvidor from './context/TranslationProvider';
 
 function App() {

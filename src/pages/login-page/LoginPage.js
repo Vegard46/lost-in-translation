@@ -1,5 +1,5 @@
 import './login-page.css';
-import LtSubmitWidget from '../components/LtSubmitWidget';
+import LtSubmitWidget from '../../components/LtSubmitWidget';
 import { useEffect, useState } from 'react';
 import  { useNavigate } from 'react-router-dom'
 import { useAlert } from 'react-alert';

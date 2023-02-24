@@ -32,7 +32,7 @@
 #translations-list li::marker {
     color: #B46FCC;
     font-size: 1.75rem;
-    content: "->    "
+    content: "•    "
 }
 #first-list-item::marker {
     content: "⭐  " !important;
