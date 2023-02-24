@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import './lt-navbar.css';
 
+// General component for NavBar link button
 function LtNavBarButton(props) {
   return (
     <div className={"lt-navbar-button"}>

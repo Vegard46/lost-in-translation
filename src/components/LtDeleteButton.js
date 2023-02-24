@@ -1,5 +1,6 @@
 import './lt-widgets.css';
 
+// General component for delete/negative-action button
 function LtDeleteButton(props) {
   return (
     <div className="lt-delete-button">

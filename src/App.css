@@ -1,6 +1,5 @@
 body {
-    /*background: #413455;*/
-    background: linear-gradient(#413455, #a178bd);
+    background: linear-gradient(#413455, #ad85c9);
     font-family: 'IBM Plex Sans','Lato',sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -8,6 +7,10 @@ body {
     min-height: 100vh;
 }
 
+
+/* 
+General class used to provide shadows on components
+*/
 .shadow {
     box-shadow:
   0 2.8px 2.2px rgba(0, 0, 0, 0.014),
@@ -18,14 +21,25 @@ body {
   0 40px 40px rgba(0, 0, 0, 0.055)
 }
 
+/*
+General class that is used to hide elements
+One can either use "visibility: hidden" which still leaves a div's space occupied
+or one can use "display: none" which removes the entirety of the div
+*/
 .invisible {
     display: none;
 }
 
+/*
+Splitting the app into a general grid used to center content
+*/
 .app {
     display: grid;
 }
 
+/*
+Custom styling based on screen size in order to make it responsive
+*/
 @media screen and (min-width: 1501px) {
     .app {
         grid-template-columns: 30% 40% 30%;

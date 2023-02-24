@@ -1,6 +1,8 @@
 
 
-
+/*
+Custom styling based on screen size to make it responsive
+*/
 @media screen and (min-width: 1501px) {
     .checkbox-container {
         width: 25%;
@@ -29,6 +31,10 @@
     border-radius: 0 0 15px 15px;
 }
 
+/*
+Border on input-widget within this page is customized to make it 
+fit in with other components
+*/
 .translation-page .lt-submit-widget input {
     border-radius: 15px 0 0 0 !important;
 }
@@ -48,13 +54,15 @@
     color: #9665A8;
     margin: auto 5% auto 5%;
 }
-
 .row-container {
     display: flex;
     margin-bottom: 5%;
 }
 
 
+/*
+Styling for the Toggle-letters component
+*/
 .checkbox-widget-container {
     display: flex;
     justify-content: right;

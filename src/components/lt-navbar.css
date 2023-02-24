@@ -39,6 +39,10 @@
     background-color: white;
     color: #B46FCC;
 }
+
+/*
+Specific css for when a navbar button is active (corresponding to page location)
+*/
 .lt-navbar-button .active {
     height: 70px !important;
     border-radius: 0 0 15px 15px !important;

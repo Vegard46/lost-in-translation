@@ -1,5 +1,7 @@
 import './lt-widgets.css';
 
+
+// General component for input and submit-button widget
 function LtSubmitWidget(props) {
 
   return (

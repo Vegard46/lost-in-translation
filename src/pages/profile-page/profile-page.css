@@ -18,6 +18,9 @@
 #profile-title span {
     color: #B46FCC;
 }
+
+
+
 #translations-list {
     display: inline-block;
     margin: 4% auto 8% auto;
@@ -35,6 +38,9 @@
     font-size: 1.75rem;
     content: "•    "
 }
+/*
+We mark the latest translation in the history list with a star
+*/
 #first-list-item::marker {
     content: "⭐  " !important;
 }

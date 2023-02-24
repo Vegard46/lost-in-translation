@@ -1,4 +1,7 @@
 
+/*
+Specific styling based on screen size to make it responsive
+*/
 @media screen and (min-width: 1501px) {
     .login-page .lt-submit-widget {
         width: 80%;

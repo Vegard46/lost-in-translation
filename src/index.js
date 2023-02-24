@@ -7,6 +7,7 @@ import AlertTemplate from 'react-alert-template-basic'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
+// Custom options settings for alert component
 const options = {
   // you can also just use 'bottom center'
   position: positions.TOP_CENTER,

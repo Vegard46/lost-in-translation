@@ -6,10 +6,20 @@ import LtNavBarButton from './LtNavBarButton';
 
 function LtNavBar() {
 
+  // Hook for accessing the current page location
+  // We use this to be able to set the active-styling on the Navbar button
+  // that corresponds to the current location on the page
   const currentLocation = useLocation();
+
+  // Although we do not use the translation value, only the setTranslation function
+  // it is required to get both from the context
+  // We use the context here to reset the translation on logout
   const [translation, setTranslation] = useContext(TranslationContext);
+
+  // Hook for page navigation
   const navigate = useNavigate();
 
+  // Array of possible page locations
   const urls = ['translate', 'profile'];
 
   return (

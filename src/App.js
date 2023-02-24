@@ -7,6 +7,11 @@ import TranslationPage from './pages/translation-page/TranslationPage';
 import ProfilePage from './pages/profile-page/ProfilePage';
 import TranslationProvidor from './context/TranslationProvider';
 
+// TranslationProvider wraps the application in order to provide
+// the appropriate context to all components/pages
+// The Translation and Profile page are wrapped inside the
+// nav route to make the NavBar always visible
+
 function App() {
   return (
     <div className="app">

@@ -1,3 +1,7 @@
+// Export file for the hand-sign images so they can be used
+// without error, as trying to "require" an img source directly
+// at runtime is not possible 
+
 import a from './individual_signs/a.png';
 import b from './individual_signs/b.png';
 import c from './individual_signs/c.png';
