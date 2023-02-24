@@ -4,14 +4,26 @@
     .lt-image-row img {
         width: 85px;
     }
+    .handsign-letter-container {
+        height: 85px;
+        width: 85px;
+    }
 }
 @media screen and (max-width: 1500px) {
     .lt-image-row img {
         width: 65px;
     }
+    .handsign-letter-container {
+        height: 65px;
+        width: 65px;
+    }
 }
 @media screen and (max-width: 800px) {
     .lt-image-row img {
+        width: 55px;
+    }
+    .handsign-letter-container {
+        height: 55px;
         width: 55px;
     }
 }
@@ -63,8 +75,6 @@
 .handsign-letter-container {
     display: inline-block;
     position: relative;
-    height: 85px;
-    width: 85px;
 }
 .handsign-letter {
     position: absolute;

@@ -79,11 +79,11 @@ function TranslationPage() {
         <div className='translation-container'>
             {images.map((e, index) => {
               return index < images.length-1 
-              ? <div className='row-container'>
+              ? <div className='row-container' key={index}>
                   <LtImageRow images={e}/>
                   <i className="fa fa-plus image-add" aria-hidden="true"/>
                 </div> 
-              : <div className='row-container'>
+              : <div className='row-container' key={index}>
                   <LtImageRow images={e}/>
                 </div>
             })}
