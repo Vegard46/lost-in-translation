@@ -74,7 +74,7 @@ function TranslationPage() {
       // Since PATCH does not actually add onto the existing translations
       // in the server but simply replaces it we need to ensure that the previous values
       // are retained by including them in the patch. We use "unshift" when adding the new
-      // phrase to the array to ensure it ends up at the beginning of the array
+      // phrase to the array to ensure it ends up at the beginning of the array.
       let transl = user[0].translations;
       transl.unshift(translation)
 
