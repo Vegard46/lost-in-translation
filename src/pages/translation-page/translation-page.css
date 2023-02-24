@@ -1,4 +1,29 @@
 
+
+
+@media screen and (min-width: 1501px) {
+    .checkbox-container {
+        width: 25%;
+        padding-top: 1%;
+        padding-bottom: 1%;
+    }
+}
+@media screen and (max-width: 1500px) {
+    .checkbox-container {
+        width: 30%;
+        padding-top: 1%;
+        padding-bottom: 1%;
+    }
+}
+@media screen and (max-width: 800px) {
+    .checkbox-container {
+        width: 40%;
+        padding-top: 2%;
+        padding-bottom: 2%;
+    }
+}
+
+
 .translation-page {
     margin-bottom: 10%;
     border-radius: 0 0 15px 15px;
@@ -27,4 +52,25 @@
 .row-container {
     display: flex;
     margin-bottom: 5%;
+}
+
+
+.checkbox-widget-container {
+    display: flex;
+    justify-content: right;
+}
+.checkbox-container {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5%;
+    border-radius: 25px;
+}
+.checkbox-container p {
+    margin: 0;
+    padding: 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #9665A8;
+    margin-right: 5%;
 }

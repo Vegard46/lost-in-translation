@@ -2,6 +2,7 @@ import LtSubmitWidget from '../../components/LtSubmitWidget';
 import LtImageRow from '../../components/LtImageRow';
 import hands_images from '../../hands_images';
 import './translation-page.css';
+import '../../components/lt-widgets.css';
 import { useContext, useEffect, useState } from 'react';
 import { TranslationContext } from '../../context/TranslationProvider';
 import { useNavigate } from 'react-router-dom';
@@ -11,6 +12,7 @@ function TranslationPage() {
 
   const [translation, setTranslation] = useContext(TranslationContext);
   const [images, setImages] = useState([]);
+  const [visible, setVisible] = useState(false);
   const navigate = useNavigate();
   const alert = useAlert();
 
@@ -65,7 +67,7 @@ function TranslationPage() {
       word = word.split("");
       let wordImages = [];
       word.map(letter => {
-        return wordImages.push(hands_images[letter]);
+        return wordImages.push({"image": hands_images[letter], "letter": letter});
       })
       return wordsImages.push(wordImages);
     })
@@ -77,14 +79,23 @@ function TranslationPage() {
       <div className="translation-page shadow">
         <LtSubmitWidget text='Translate a phrase...' onClick={processTranslation} onChange={setTranslation} value={translation}/>
         <div className='translation-container'>
+          <div className='checkbox-widget-container'>
+            <div className='checkbox-container shadow'>
+                <p>ABC</p>
+                <label class="switch">
+                  <input type="checkbox" value={visible} onChange={() => setVisible(!visible)}/>
+                  <span class="slider round"></span>
+                </label>
+            </div>
+          </div>
             {images.map((e, index) => {
               return index < images.length-1 
               ? <div className='row-container' key={index}>
-                  <LtImageRow images={e}/>
+                  <LtImageRow images={e} visible={visible}/>
                   <i className="fa fa-plus image-add" aria-hidden="true"/>
                 </div> 
               : <div className='row-container' key={index}>
-                  <LtImageRow images={e}/>
+                  <LtImageRow images={e} visible={visible}/>
                 </div>
             })}
         </div>

@@ -8,6 +8,10 @@
         height: 85px;
         width: 85px;
     }
+    .handsign-letter {
+        width: 30%;
+        font-size: 1.65rem;
+    }
 }
 @media screen and (max-width: 1500px) {
     .lt-image-row img {
@@ -17,6 +21,10 @@
         height: 65px;
         width: 65px;
     }
+    .handsign-letter {
+        width: 40%;
+        font-size: 1.45rem;
+    }
 }
 @media screen and (max-width: 800px) {
     .lt-image-row img {
@@ -25,6 +33,10 @@
     .handsign-letter-container {
         height: 55px;
         width: 55px;
+    }
+    .handsign-letter {
+        width: 40%;
+        font-size: 1.35rem;
     }
 }
 
@@ -78,12 +90,15 @@
 }
 .handsign-letter {
     position: absolute;
-    top: 2%;
-    left: 2%;
-    font-size: 1.75rem;
+    top: 1%;
+    left: 1%;
     font-weight: bolder;
     font-style: italic;
     color:#B46FCC;
+    padding-right: 5%;
+    background-color: rgba(233, 204, 233, 0.7);
+    text-align: center;
+    border-radius: 5px;
 }
 
 
@@ -103,4 +118,69 @@
     background-color: #B46FCC;
     color: white;
     cursor: pointer;
+}
+
+
+
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+/* Hide default HTML checkbox */
+.switch input {
+opacity: 0;
+width: 0;
+height: 0;
+}
+
+/* The slider */
+.slider {
+position: absolute;
+cursor: pointer;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: #ccc;
+-webkit-transition: .4s;
+transition: .4s;
+}
+
+.slider:before {
+position: absolute;
+content: "";
+height: 26px;
+width: 26px;
+left: 4px;
+bottom: 4px;
+background-color: white;
+-webkit-transition: .4s;
+transition: .4s;
+}
+
+input:checked + .slider {
+background-color:#B46FCC;
+}
+
+input:focus + .slider {
+box-shadow: 0 0 1px #B46FCC;
+}
+
+input:checked + .slider:before {
+-webkit-transform: translateX(26px);
+-ms-transform: translateX(26px);
+transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+border-radius: 34px;
+}
+
+.slider.round:before {
+border-radius: 50%;
 }

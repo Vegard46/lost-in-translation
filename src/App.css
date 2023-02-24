@@ -18,6 +18,10 @@ body {
   0 40px 40px rgba(0, 0, 0, 0.055)
 }
 
+.invisible {
+    display: none;
+}
+
 .app {
     display: grid;
 }
